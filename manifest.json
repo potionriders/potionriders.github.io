@@ -1,11 +1,11 @@
 {
-    "name": "potion_riders",
-    "short_name": "potion_riders",
+    "name": "Potion Riders",
+    "short_name": "Potion Riders",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "a Game project",
+    "background_color": "#4B2E83",
+    "theme_color": "#4B2E83",
+    "description": "Potion Riders – gioco itinerante a sottobicchieri per GiocAosta",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

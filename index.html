@@ -29,7 +29,11 @@
   <title>Potion Riders</title>
   <link rel="manifest" href="manifest.json">
 
-  <!-- jsQR: richiesto da qrcode_reader_web per la scansione QR su web. -->
+  <!--
+    jsQR: richiesto da `qrcode_reader_web` per la scansione QR su web.
+    Il package NON inietta la libreria da solo (vedi README), quindi va
+    caricata qui. Senza, la fotocamera si apre ma nessun QR viene rilevato.
+  -->
   <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
 </head>
 <body>

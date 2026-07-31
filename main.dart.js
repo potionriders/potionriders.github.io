@@ -113216,11 +113216,22 @@ case 5:q=4
 g=p.pop()
 h=A.a1(g)
 if(h instanceof A.vl){m=h
-l="Si \xe8 verificato un errore durante la registrazione"
-if(m.c==="weak-password")l="La password fornita \xe8 troppo debole"
-else if(m.c==="email-already-in-use")l="L'account esiste gi\xe0 per questa email"
-else if(m.c==="nickname-already-in-use"){i=m.b
-l=i==null?"Il nickname \xe8 gi\xe0 in uso":i}n.c.R(t.q).f.bZ(A.ct(null,null,null,B.ab,null,B.p,null,A.y(l,null,null,null,null,null,null,null,null),null,B.U,null,null,null,null,null,null,null,null,null,null))}else{k=h
+l=null
+switch(m.c){case"weak-password":l="Password troppo debole: usa almeno 6 caratteri"
+break
+case"email-already-in-use":l="Esiste gi\xe0 un account con questa email"
+break
+case"invalid-email":l="Indirizzo email non valido"
+break
+case"operation-not-allowed":l="Registrazione via email non abilitata sul progetto Firebase"
+break
+case"too-many-requests":l="Troppi tentativi: riprova tra qualche minuto"
+break
+case"network-request-failed":l="Nessuna connessione: controlla la rete"
+break
+default:h=m.c
+i=m.b!=null?": "+A.k(m.b):""
+l="Registrazione non riuscita ("+h+")"+i}n.c.R(t.q).f.bZ(A.ct(null,null,null,B.ab,null,B.p,null,A.y(l,null,null,null,null,null,null,null,null),null,B.U,null,null,null,null,null,null,null,null,null,null))}else{k=h
 n.c.R(t.q).f.bZ(A.ct(null,null,null,B.ab,null,B.p,null,A.y("Errore durante la registrazione: "+A.k(k),null,null,null,null,null,null,null,null),null,B.U,null,null,null,null,null,null,null,null,null,null))}o.push(7)
 s=6
 break
